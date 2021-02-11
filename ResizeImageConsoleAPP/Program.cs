@@ -11,17 +11,11 @@ namespace ResizeImageConsoleAPP
         static void Main(string[] args)
         {
             ResizeImage resize = new ResizeImage();
-            while (true)
-            {              
-                if (resize.getOneImageDetails().Id != 0)
-                {
-                    Image imagedetails = resize.getOneImageDetails();
-                    Console.WriteLine($"Image ID: {imagedetails.Id}, Image size:" + $" {imagedetails.ImageHeight} x {imagedetails.ImageWidth}");
-                    resize.changeImageStatus(imagedetails);
-                }
-              
-            }         
-          
+            resize.Initialize(1000);
+
+            Console.ReadKey();
+            Console.ReadKey();
+
         }
     }
 }

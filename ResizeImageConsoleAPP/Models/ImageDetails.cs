@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace ResizeImageConsoleAPP.Models
 {
-    public partial class Image
+    public partial class ImageDetails
     {
         public int Id { get; set; }
         public string ImageId { get; set; }

@@ -17,7 +17,7 @@ namespace ResizeImageConsoleAPP.Models
         {
         }
 
-        public virtual DbSet<Image> Images { get; set; }
+        public virtual DbSet<ImageDetails> Images { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -32,9 +32,9 @@ namespace ResizeImageConsoleAPP.Models
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
 
-            modelBuilder.Entity<Image>(entity =>
+            modelBuilder.Entity<ImageDetails>(entity =>
             {
-                entity.ToTable("Image");
+                entity.ToTable("ImageDetails");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
